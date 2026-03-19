@@ -129,3 +129,16 @@ ex:git log
 git log --oneline
 -used to show the commit history in a short and simple format.
 ex:git log --oneline
+# 4. git log --graph
+# syntax
+git log --graph
+-used to show the commits on a structured manner 
+ex:git log --graph
+# git show
+# syntax
+git show <specified commit name>
+-used to get the details about the specified commit,if nothing is specified there then it is going to take the recent commited one
+ex:git show "recent commit"
+# git diff 
+# syntax
+
