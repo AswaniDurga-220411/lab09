@@ -141,4 +141,65 @@ git show <specified commit name>
 ex:git show "recent commit"
 # git diff 
 # syntax
+git diff
+-shows changes not yet staged
+-there is different ways to use the diff here
+1)git --staged-used to compare the staged changes
+2)git --cached-shows changes that are added using git add but not commited,and it is also shows the difference between branches
+git diff = before saving (preview changes)
+git show = after saving (see committed changes)
+git diff --name-only=>shows only file names changed
+Key Role of git diff
+👉 It helps you:
+Review changes before committing
+Debug mistakes
+Understand modifications clearly
+Avoid committing unwanted code
+# git diff --staged:
+ # syntax
+git diff --staged
+-see what changes are ready to be committed
+--shows the chnags already staged fro commit
+ex:git diff --staged
+
+# git blame
+# syntax
+git blame <file_name>
+-git blame is a command used to see who chnaged each line in a file and when,it helps you to track the history of every line of code
+-it is used to find the who introduced a bug ,Understand who to ask about a piece of code,see when a line was changed,track history of specific lines
+-git blame -n file.txt=>shows the line numbers
+It shows the last person who modified the line, not the original creator.
+If someone edits a line later, blame will show the latest editor.
+# git reflog
+git reflog = History of your actions in Git (like commits, resets, checkouts, etc.)
+Why is it useful?
+Sometimes you:
+accidentally delete commits 
+do a git reset --hard
+switch branches and lose track
+ git reflog helps you recover lost commits
+# syntax
+git reflog
+# git shortlog
+git shortlog is used to summarize commit history grouped by author.
+It tells you:
+Who contributed
+How many commits each person made
+# syntax
+git shortlog
+-git shortlog -s -n =>show only number of commits
+ex:git shortlog
+## File Tracking Commands
+# git add
+# syntax
+ git add <filename>
+-it is used to add the specific or all files to the staging area
+ex:git add file.txt
+# git add .
+# syntax
+git add .
+-it is used to add all the files present in  the working directory to the staging area
+ex:git add .
+# git add -p
+# syntax  
 
