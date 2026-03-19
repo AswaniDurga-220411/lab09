@@ -202,4 +202,56 @@ git add .
 ex:git add .
 # git add -p
 # syntax  
-
+git add -p
+-p means patch mode
+y → stage this part
+n → skip it
+s → split into smaller parts
+q → quit
+Why use it?
+Make clean commits
+Separate features and fixes
+Avoid committing unwanted changes
+git add -p lets you stage only selected parts of your changes
+# git restore
+git restore = Discard changes in your working directory
+# syntax
+git restore
+Like “undo” button for your file changes
+# git restore --staged
+Used to remove files from the staging area (undo git add)
+git restore --staged = Unstage the file (but keep changes in file)
+Easy Analogy
+Like taking an item out of your shopping cart
+(you still have it, but not ready to buy)
+# git rm
+Used to delete a file from your project and Git tracking
+git rm = Remove file from Git + delete it from folder
+# syntax
+git rm file.txt
+# remove only from git
+git rm --cached file.txt
+# force remove
+git rm -f file.txt
+Removes even if there are changes
+# git mv
+Used to move or rename a file and track it in Git
+# syntax
+git mv oldname.txt newname.txt
+File is moved + staged
+git mv file.txt folder/file.txt-for file move
+## commit commands
+# git commit
+--it is used to move the all files from the staging area to the local repo by using the commit 
+# syntax
+git commit-then it opens the text editor for the commit message
+# git commit -m
+it is same as git commit but the only chnage is -m means the message for the commit
+# syntax
+git commit -m "message"
+# git commit --amend
+Used to modify the last commit
+git commit --amend = Edit your most recent commit
+Important Note 
+Only affects last commit
+Avoid using after pushing
